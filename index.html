@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<title>Költség elszámolás</title>
+	<script src='js/records22.js'></script>
+	<script src='js/renderer.js'></script>
+</head>
+<body style='font-family: Arial'>
+	<h2>Kiküldetési költségelszámolás<br>SMP Solutions Zrt.</h2>
+
+	<table border='3' cellpadding='5' style='border-collapse:collapse'>
+	<tr>
+		<td>Kiküldött neve:</td>
+		<td>Csurgay Péter Árpád</td>
+	</tr>
+	<tr>
+		<td>Kiküldetés kezdete:</td>
+		<td>2025-05-25</td>
+	</tr>
+	<tr>
+		<td>Kiküldetés vége:</td>
+		<td>2025-05-30</td>
+	</tr>
+	<tr>
+		<td>Kiküldetés helye:</td>
+		<td>Tashkent, Üzbegisztán</td>
+	</tr>
+	<tr>
+		<td>Kiküldetés célja:</td>
+		<td>Ipoteka Service Management</td>
+	</tr>
+	<tr>
+		<td>Munkavállaló bankszámlaszáma:</td>
+		<td>11600006-50000005-02898434</td>
+	</tr>
+	</table>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		let element;
+		document.body.appendChild(document.createElement("p"));
+		element = document.createElement("h2");
+		element.textContent="Előleg";
+		document.body.appendChild(element);
+		document.body.appendChild(advanceTable(records));
+		document.body.appendChild(document.createElement("p"));
+		element = document.createElement("h2");
+		element.textContent="Vásárlások";
+		document.body.appendChild(element);
+		document.body.appendChild(renderTable(records));
+		document.body.appendChild(document.createElement("p"));
+		element = document.createElement("h2");
+		element.textContent="Összesen";
+		document.body.appendChild(element);
+		document.body.appendChild(sumTable(records));
+	});
+</script>
+</body>
+</html>
